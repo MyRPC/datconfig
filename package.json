@@ -1,14 +1,22 @@
 {
   "name": "datconfig-parser",
   "version": "1.0.2",
-  "description": "Parses stuff for MyRPC",
-  "main": "build/index.js",
+  "description": "A definitive configuration language.",
+  "main": "dist/datconfig.js",
+  "module": "dist/datconfig.es.js",
+  "jsnext:main": "dist/datconfig.es.js",
+  "cjs:main": "dist/datconfig.cjs.js",
   "dependencies": {
     "dot-prop": "^4.2.0",
     "is-obj": "^1.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "rollup": "^1.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  },
   "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "yarn build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

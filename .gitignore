@@ -1,3 +1,7 @@
+# Node Garbage
 yarn.lock
 yarn-error.log
 node_modules
+
+# Distribution Files
+dist
