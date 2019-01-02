@@ -1,14 +1,25 @@
 {
-  "name": "myrpc-config-parser",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "name": "datconfig",
+  "version": "1.0.0",
+  "description": "Parses stuff for MyRPC",
+  "main": "build/index.js",
+  "dependencies": {
+    "dot-prop": "^4.2.0",
+    "is-obj": "^1.0.1"
+  },
+  "devDependencies": {},
   "scripts": {
+    "build": "tsc --outDir build src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyRPC/datconfig.git"
   },
   "author": "Kyle Smith",
   "license": "MIT",
-  "dependencies": {
-    "dot-prop": "^4.2.0"
-  }
+  "bugs": {
+    "url": "https://github.com/MyRPC/datconfig/issues"
+  },
+  "homepage": "https://github.com/MyRPC/datconfig#readme"
 }
