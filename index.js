@@ -13,6 +13,18 @@ function parseFile (filePath) {
 
 
 }
+function parseText (data) {
+    var lines = data.replace("\r", "").split("\n");
+    var final = {}
+    lines.forEach((e) => {
+        var parsed = parse(e);
+        var path = parsed[0].replace(":", ".")
+        dotProp.set(final, path, parsed[1].replace("[", "").replace("]", ""));
+    })
+    return final
+
+
+}
 function parse (text) {
     var valueMatch = /\[\w+\]/g
     var keyMatch = /\w+:\w+/g
@@ -22,5 +34,6 @@ function parse (text) {
     return [key, value]
     
 }
-module.parse = parseFile
+module.parseFile = parseFile
+module.parseText = parseText
 
