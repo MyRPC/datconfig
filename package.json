@@ -1,5 +1,5 @@
 {
-  "name": "myrpc-config-parser",
+  "name": "datconfig-parser",
   "version": "1.0.2",
   "description": "Parses stuff for MyRPC",
   "main": "index.js",
