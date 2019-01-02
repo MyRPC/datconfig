@@ -1,6 +1,6 @@
 {
-  "name": "datconfig",
-  "version": "1.0.0",
+  "name": "datconfig-parser",
+  "version": "1.0.2",
   "description": "Parses stuff for MyRPC",
   "main": "build/index.js",
   "dependencies": {
@@ -9,7 +9,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "tsc --outDir build src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
