@@ -1,5 +1,5 @@
 <p align=center>
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
     <img src="https://img.shields.io/github/repo-size/MyRPC/datconfig.svg?style=flat-square" alt="GitHub repo size in bytes">
     <img src="https://img.shields.io/github/last-commit/MyRPC/datconfig.svg?style=flat-square" alt="GitHub last commit">
     <img src="https://img.shields.io/npm/v/datconfig-parser.svg?style=flat-square" alt="npm (scoped)">
@@ -21,8 +21,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/45880278?v=4" width="100px;"/><br /><sub><b>Landon Gravat</b></sub>](https://railrunner16.me/)<br />[💻](https://github.com/MyRPC/datconfig/commits?author=RailRunner166 "Code") [📖](https://github.com/MyRPC/datconfig/commits?author=RailRunner166 "Documentation") |
-| :---: |
+| [<img src="https://avatars1.githubusercontent.com/u/45880278?v=4" width="100px;"/><br /><sub><b>Landon Gravat</b></sub>](https://railrunner16.me/)<br />[💻](https://github.com/MyRPC/datconfig/commits?author=RailRunner166 "Code") [📖](https://github.com/MyRPC/datconfig/commits?author=RailRunner166 "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/17152768?v=4" width="100px;"/><br /><sub><b>ThatOneGamer999</b></sub>](https://github.com/ThatOneGamer999)<br />[💻](https://github.com/MyRPC/datconfig/commits?author=ThatOneGamer999 "Code") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
