@@ -1,23 +1,48 @@
 {
   "name": "datconfig-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A definitive configuration language.",
   "main": "dist/datconfig.js",
   "module": "dist/datconfig.es.js",
   "jsnext:main": "dist/datconfig.es.js",
   "cjs:main": "dist/datconfig.cjs.js",
   "dependencies": {
-    "dot-prop": "^4.2.0",
-    "is-obj": "^1.0.1"
+    "@railrunner16/raildash": "^1.0.2-patch.0"
   },
   "devDependencies": {
+    "all-contributors-cli": "^5.6.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.11.1",
+    "foodoc": "^0.0.9",
+    "gulp": "^3.9.1",
+    "gulp-jsdoc3": "^2.0.0",
+    "gulp-mocha": "^6.0.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
     "rollup": "^1.0.0",
     "rollup-plugin-node-resolve": "^4.0.0"
   },
   "scripts": {
     "build": "rollup -c",
-    "prepublishOnly": "yarn build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "yarn build && yarn docs",
+    "docs": "gulp doc",
+    "test": "nyc gulp test",
+    "coverage": "mkdir coverage && yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "contrib:add": "all-contributors add",
+    "contrib:gen": "all-contributors generate",
+    "contrib:check": "all-contributors check"
+  },
+  "nyc": {
+    "exclude": [
+      "dist",
+      "test"
+    ],
+    "report-dir": "./coverage",
+    "reporter": [
+      "lcov"
+    ]
   },
   "repository": {
     "type": "git",

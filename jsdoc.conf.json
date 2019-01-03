@@ -1,0 +1,35 @@
+{
+    "source": {
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\|.+\\.test\\.js)_"
+    },
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": [
+            "jsdoc",
+            "closure"
+        ]
+    },
+    "opts": {
+        "destination": "./docs",
+        "template": "./node_modules/foodoc/template"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "markdown": {
+        "parser": "gfm",
+        "hardwrap": true
+    },
+    "templates": {
+        "systemName": "Datconfig",
+        "systemColor": "#7289da",
+        "systemSummary": "Parse datconfig files in JavaScript",
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "outputSourceFiles": false,
+        "outputSourcePath": false,
+        "copyright": "©2018 MyRPC Developers",
+        "dateFormat": "MMMM Do YYYY, h:mm:ss a"
+    }
+}

@@ -1,2 +1,2 @@
-export const keyMatch = /\w+(?:\:\w+)+/g;
-export const valueMatch = /\[(\w+)\]/g;
+export const bodyMatch = /(?:\w|\d)+(?:\:(?:\w|\d)+)+/g;
+export const valueMatch = /\[((?:\w|\d)+)\]/g;

@@ -1,4 +1,4 @@
-import dotProp from 'dot-prop';
+import setProp from './utils/setProp';
 
 import sanitizeConfig from './utils/sanitizeConfig';
 import { bodyMatch, valueMatch } from './globals';
@@ -16,6 +16,7 @@ class DatconfigParser {
     }
 
     parseLine(line) {
+        line = line.trim().replace(/\n/, '');
         const value = this.regex.valueMatch.exec(line)[0];
         const path = text.match(keyMatch)[0].replace(/\:/, '.');
         return {
@@ -24,14 +25,32 @@ class DatconfigParser {
         };
     }
 
+    /**
+     * Parse the DatconfigParser's data
+     * 
+     * @public
+     * 
+     * @example
+     * const data = `data:state [hello]
+     * data:num [130]`
+     * const parser = new DatconfigParser()
+     */
     parse() {
         const lines = this.data.split(/\n/);
 
         lines.forEach(line => {
-            const parsedLine = this.parseLine(line);
-            dotProp.set(this.output, parsedLine.path, parsedLine.value);
+            let { path, value } = this.parseLine(line);
+
+            if (value.trim() === 'true') value = true;
+            else if (value.trim() === 'false') value = false;
+            else if (!isNaN(value.trim())) value = Number(value.trim());
+            else value = value;
+
+            setProp(this.output, path, value);
         });
 
         return this.output;
     }
 }
+
+export default DatconfigParser;

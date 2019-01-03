@@ -6,5 +6,10 @@ rollup.config.js
 .travis.yml
 .gitignore
 
-# Other Stuff
+# Testing
+.nyc_output
+coverage
+
+# Node Garbage
 node_modules
+yarn-error.log

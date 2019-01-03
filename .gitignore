@@ -5,3 +5,7 @@ node_modules
 
 # Distribution Files
 dist
+
+# Testing
+.nyc_output
+coverage
