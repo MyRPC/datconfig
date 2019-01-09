@@ -1,13 +1,15 @@
 {
   "name": "@myrpc/datconfig-core",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A definitive configuration language.",
   "main": "dist/datconfig.js",
-  "module": "dist/datconfig.es.js",
-  "jsnext:main": "dist/datconfig.es.js",
-  "cjs:main": "dist/datconfig.cjs.js",
   "dependencies": {
-    "@railrunner16/raildash": "^1.0.2-patch.0"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "@railrunner16/raildash": "^1.0.2-patch.0",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "lodash.setwith": "^4.3.2"
   },
   "devDependencies": {
     "all-contributors-cli": "^5.6.0",
@@ -57,5 +59,17 @@
   "bugs": {
     "url": "https://github.com/MyRPC/datconfig/issues"
   },
-  "homepage": "https://github.com/MyRPC/datconfig#readme"
+  "homepage": "https://github.com/MyRPC/datconfig#readme",
+  "babel": {
+    "plugins": [
+      [
+        "dynamic-import-node"
+      ]
+    ],
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  }
 }
