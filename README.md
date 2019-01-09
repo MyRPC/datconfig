@@ -1,5 +1,4 @@
 <p align=center>
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
     <img src="https://img.shields.io/github/repo-size/MyRPC/datconfig.svg?style=flat-square" alt="GitHub repo size in bytes">
     <img src="https://img.shields.io/github/last-commit/MyRPC/datconfig.svg?style=flat-square" alt="GitHub last commit">
     <img src="https://img.shields.io/npm/v/datconfig-parser.svg?style=flat-square" alt="npm (scoped)">
@@ -10,6 +9,7 @@
     <img src="https://img.shields.io/github/languages/top/MyRPC/datconfig.svg?style=flat-square" alt="GitHub top language"><br>
     <img src="https://img.shields.io/npm/l/datconfig-parser.svg?style=flat-square" alt="NpmLicense">
 </p>
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 ---
 
