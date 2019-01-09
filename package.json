@@ -1,6 +1,6 @@
 {
-  "name": "datconfig-parser",
-  "version": "1.0.3",
+  "name": "@myrpc/datconfig-core",
+  "version": "1.0.5",
   "description": "A definitive configuration language.",
   "main": "dist/datconfig.js",
   "module": "dist/datconfig.es.js",
@@ -48,7 +48,11 @@
     "type": "git",
     "url": "git+https://github.com/MyRPC/datconfig.git"
   },
-  "author": "Kyle Smith",
+  "author": {
+    "name": "MyRPC Maintainers",
+    "email": "support@myrpc.app",
+    "url": "https://myrpc.app"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MyRPC/datconfig/issues"
