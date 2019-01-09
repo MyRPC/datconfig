@@ -1,7 +1,6 @@
 language: node_js
 node_js:
 - node
-test_script:
-- yarn coverage
 script:
+- yarn coverage
 - yarn build
