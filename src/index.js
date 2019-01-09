@@ -1,7 +1,7 @@
-import setProp from './utils/setProp';
-
 import sanitizeConfig from './utils/sanitizeConfig';
 import { bodyMatch, valueMatch, commentsRegex } from './globals';
+
+const setWith = require('lodash.setwith');
 
 class DatconfigParser {
     /**
@@ -23,8 +23,10 @@ class DatconfigParser {
      */
     parseLine(line) {
         line = line.trim();
-        const value = valueMatch.exec(line)[0];
-        const path = line.match(bodyMatch)[0].replace(/\:/, '.');
+        const value = line.match(valueMatch)[0];
+        const path = line.match(bodyMatch)[0].replace(/\:/g, '.');
+        if (!value) throw new SyntaxError('No value detected.');
+        
         return {
             path,
             value,
@@ -47,7 +49,7 @@ class DatconfigParser {
      * const parser = new DatconfigParser(options);
      * 
      * parser.parse(data)
-     * // => {state: 'hello', num: 130}
+     * // => {data: {state: 'hello', num: 130}}
      */
     parse(data) {
         if (!this.allowComments && commentsRegex.test(data)) throw new SyntaxError('If `options.allowComments` is set to false, you must not use comments!');
@@ -64,7 +66,7 @@ class DatconfigParser {
             else if (!isNaN(value.trim())) value = Number(value.trim());
             else value = value;
 
-            setProp(output, path, value);
+            setWith(output, path, value, Object);
         }
 
         return output;

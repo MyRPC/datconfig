@@ -5,7 +5,7 @@ const mocha = require('gulp-mocha');
 gulp.task('test', () => {
 	gulp.src('test/*.test.js', {read: false})
 		.pipe(mocha({
-            compilers: 'js:babel-register'
+            compilers: 'js:@babel/register'
         }));
 });
 
