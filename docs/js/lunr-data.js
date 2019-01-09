@@ -50,9 +50,34 @@ window.lunrData = {
         "global.html": [
           "document",
           "global"
+        ],
+        "list_class.html": [
+          "class",
+          "document",
+          "list",
+          "list:class"
+        ],
+        "DatconfigParser.html": [
+          "class",
+          "creat",
+          "datconfigpars",
+          "given",
+          "new",
+          "option",
+          "parser"
+        ],
+        "DatconfigParser.html#parse": [
+          "data",
+          "datconfigparser#pars",
+          "datconfigparser'",
+          "function",
+          "object",
+          "option",
+          "pars",
+          "us"
         ]
       },
-      "length": 2
+      "length": 5
     },
     "tokenStore": {
       "root": {
@@ -79,10 +104,69 @@ window.lunrData = {
                               "ref": "index.html",
                               "tf": 617.5
                             }
+                          },
+                          "p": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {
+                                    "DatconfigParser.html": {
+                                      "ref": "DatconfigParser.html",
+                                      "tf": 1900
+                                    }
+                                  },
+                                  "e": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "#": {
+                                        "docs": {},
+                                        "p": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {
+                                                  "DatconfigParser.html#parse": {
+                                                    "ref": "DatconfigParser.html#parse",
+                                                    "tf": 1150
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "'": {
+                                        "docs": {
+                                          "DatconfigParser.html#parse": {
+                                            "ref": "DatconfigParser.html#parse",
+                                            "tf": 10
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           }
                         }
                       }
                     }
+                  }
+                }
+              },
+              "a": {
+                "docs": {
+                  "DatconfigParser.html#parse": {
+                    "ref": "DatconfigParser.html#parse",
+                    "tf": 43.33333333333333
                   }
                 }
               }
@@ -105,6 +189,10 @@ window.lunrData = {
                           "global.html": {
                             "ref": "global.html",
                             "tf": 35
+                          },
+                          "list_class.html": {
+                            "ref": "list_class.html",
+                            "tf": 35
                           }
                         }
                       }
@@ -126,6 +214,32 @@ window.lunrData = {
                   "index.html": {
                     "ref": "index.html",
                     "tf": 17.5
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "DatconfigParser.html#parse": {
+                            "ref": "DatconfigParser.html#parse",
+                            "tf": 110
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -198,6 +312,21 @@ window.lunrData = {
                   "index.html": {
                     "ref": "index.html",
                     "tf": 17.5
+                  },
+                  "DatconfigParser.html#parse": {
+                    "ref": "DatconfigParser.html#parse",
+                    "tf": 693.3333333333334
+                  }
+                },
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "DatconfigParser.html": {
+                        "ref": "DatconfigParser.html",
+                        "tf": 10
+                      }
+                    }
                   }
                 }
               }
@@ -245,20 +374,205 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "i": {
+            "docs": {},
+            "v": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "DatconfigParser.html": {
+                      "ref": "DatconfigParser.html",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "c": {
+          "docs": {},
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "s": {
+                  "docs": {
+                    "list_class.html": {
+                      "ref": "list_class.html",
+                      "tf": 635
+                    },
+                    "DatconfigParser.html": {
+                      "ref": "DatconfigParser.html",
+                      "tf": 110
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "DatconfigParser.html": {
+                      "ref": "DatconfigParser.html",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "l": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "list_class.html": {
+                    "ref": "list_class.html",
+                    "tf": 110
+                  }
+                },
+                ":": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "a": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "s": {
+                            "docs": {
+                              "list_class.html": {
+                                "ref": "list_class.html",
+                                "tf": 1300
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "n": {
+          "docs": {},
+          "e": {
+            "docs": {},
+            "w": {
+              "docs": {
+                "DatconfigParser.html": {
+                  "ref": "DatconfigParser.html",
+                  "tf": 10
+                }
+              }
+            }
+          }
+        },
+        "o": {
+          "docs": {},
+          "p": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "DatconfigParser.html": {
+                        "ref": "DatconfigParser.html",
+                        "tf": 10
+                      },
+                      "DatconfigParser.html#parse": {
+                        "ref": "DatconfigParser.html#parse",
+                        "tf": 10
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "b": {
+            "docs": {},
+            "j": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "DatconfigParser.html#parse": {
+                        "ref": "DatconfigParser.html#parse",
+                        "tf": 33.33333333333333
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "u": {
+          "docs": {},
+          "s": {
+            "docs": {
+              "DatconfigParser.html#parse": {
+                "ref": "DatconfigParser.html#parse",
+                "tf": 10
+              }
+            }
           }
         }
       },
-      "length": 8
+      "length": 27
     },
     "corpusTokens": [
+      "class",
+      "creat",
+      "data",
       "datconfig",
+      "datconfigpars",
+      "datconfigparser#pars",
+      "datconfigparser'",
       "document",
       "file",
+      "function",
+      "given",
       "global",
       "index",
       "javascript",
+      "list",
+      "list:class",
+      "new",
+      "object",
+      "option",
       "pars",
-      "readm"
+      "parser",
+      "readm",
+      "us"
     ],
     "pipeline": [
       "trimmer",
@@ -288,6 +602,38 @@ window.lunrData = {
       "summary": "All documented globals.",
       "description": "",
       "body": ""
+    },
+    "list_class.html": {
+      "id": "list_class.html",
+      "kind": "list",
+      "title": "Classes",
+      "longname": "list:class",
+      "name": "Classes",
+      "tags": "list:class",
+      "summary": "All documented classes.",
+      "description": "",
+      "body": ""
+    },
+    "DatconfigParser.html": {
+      "id": "DatconfigParser.html",
+      "kind": "class",
+      "title": "DatconfigParser",
+      "longname": "DatconfigParser",
+      "name": "DatconfigParser",
+      "tags": "DatconfigParser",
+      "summary": "",
+      "description": "Create a new parser with given options",
+      "body": ""
+    },
+    "DatconfigParser.html#parse": {
+      "id": "DatconfigParser.html#parse",
+      "kind": "function",
+      "title": "parse( data ) → {object}",
+      "longname": "DatconfigParser#parse",
+      "name": "parse",
+      "tags": "DatconfigParser#parse parse",
+      "summary": "",
+      "description": "Parse some data using the DatconfigParser's options"
     }
   }
 };

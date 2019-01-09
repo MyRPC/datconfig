@@ -1,24 +1,30 @@
 import setProp from './utils/setProp';
 
 import sanitizeConfig from './utils/sanitizeConfig';
-import { bodyMatch, valueMatch } from './globals';
+import { bodyMatch, valueMatch, commentsRegex } from './globals';
 
 class DatconfigParser {
-    constructor(configStr) {
-        this.data = sanitizeConfig(configStr);
-
-        this.regex = {
-            bodyMatch,
-            valueMatch,
-        };
-
-        this.output = {};
+    /**
+     * Create a new parser with given options
+     * @param {object} options Parser options
+     * @param {boolean} options.allowComments Whether or not to allow comments
+     */
+    constructor(options) {
+        this.allowComments = !!options.allowComments;
     }
-
+    
+    /**
+     * Parse a line of datconfig code
+     * @param {string} line The line to parse
+     * @returns {object} Data retrieved from the line
+     * 
+     * @private
+     * @memberof DatconfigParser
+     */
     parseLine(line) {
-        line = line.trim().replace(/\n/, '');
-        const value = this.regex.valueMatch.exec(line)[0];
-        const path = text.match(keyMatch)[0].replace(/\:/, '.');
+        line = line.trim();
+        const value = valueMatch.exec(line)[0];
+        const path = line.match(bodyMatch)[0].replace(/\:/, '.');
         return {
             path,
             value,
@@ -26,19 +32,31 @@ class DatconfigParser {
     }
 
     /**
-     * Parse the DatconfigParser's data
+     * Parse some data using the DatconfigParser's options
+     * @param {string} data The datconfig code to parse
+     * @returns {object} The parsed config
      * 
+     * @memberof DatconfigParser
      * @public
      * 
      * @example
+     * const options = {};
      * const data = `data:state [hello]
      * data:num [130]`
-     * const parser = new DatconfigParser()
+     * 
+     * const parser = new DatconfigParser(options);
+     * 
+     * parser.parse(data)
+     * // => {state: 'hello', num: 130}
      */
-    parse() {
-        const lines = this.data.split(/\n/);
+    parse(data) {
+        if (!this.allowComments && commentsRegex.test(data)) throw new SyntaxError('If `options.allowComments` is set to false, you must not use comments!');
+        data = sanitizeConfig(data, true);
+        const output = {};
+        
+        const lines = data.split(/\n/);
 
-        lines.forEach(line => {
+        for (const line of lines) {
             let { path, value } = this.parseLine(line);
 
             if (value.trim() === 'true') value = true;
@@ -46,10 +64,10 @@ class DatconfigParser {
             else if (!isNaN(value.trim())) value = Number(value.trim());
             else value = value;
 
-            setProp(this.output, path, value);
-        });
+            setProp(output, path, value);
+        }
 
-        return this.output;
+        return output;
     }
 }
 
